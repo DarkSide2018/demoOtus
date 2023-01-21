@@ -1,5 +1,8 @@
+package main
+
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
+
 
 class MutableUser(val map: MutableMap<String, Any?>) {
     var firstName: String by map
