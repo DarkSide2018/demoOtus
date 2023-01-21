@@ -1,7 +1,5 @@
 package inheritance
 
-import Figure
-
 fun main() {
     val shape1=Circle("circle")
     val shape2=Square("circle")
