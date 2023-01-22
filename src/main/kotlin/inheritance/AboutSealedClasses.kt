@@ -2,7 +2,7 @@ package inheritance
 
 fun main() {
     val shape1=Circle("circle")
-    val shape2=Square("circle")
+    val shape2=Square("square")
     typeChecker(shape1)
     typeChecker(shape2)
 }

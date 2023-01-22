@@ -3,15 +3,20 @@ import inheritance.Shape
 fun main() {
     val triangle = Triangle(4, 5, 6)
     val quadrAngle = QuadrAngle(4, 5)
+    triangle.mutableProperty
     listOf<Figure>(triangle, quadrAngle).forEach {
         it.print()
     }
 
 }
 abstract class Figure(
-    val height: Int,
-    val width: Int
+    protected val height: Int,
+    protected val width: Int
 ){
+    var mutableProperty:Int=0
+        set(value) {field=value}
+        get() {return field}
+
 
     abstract fun print()
     override fun equals(other: Any?): Boolean {
@@ -46,7 +51,7 @@ abstract class Figure(
  }
 
 class Triangle(
-    val diagonal: Int,
+    private val diagonal: Int,
      height: Int,
      width: Int,
 ) : Figure(
@@ -58,4 +63,11 @@ class Triangle(
     }
 
 }
+
+//class Other:Shape{
+//    override fun action() {
+//        TODO("Not yet implemented")
+//    }
+//
+//}
 
