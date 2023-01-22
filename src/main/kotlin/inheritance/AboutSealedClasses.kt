@@ -7,8 +7,8 @@ fun main() {
     typeChecker(shape2)
 }
 
-//
-//class FigureTwo:Printer(
+
+//class FigureTwo:Figure(
 //    width = 5,
 //    height = 6
 //) {
