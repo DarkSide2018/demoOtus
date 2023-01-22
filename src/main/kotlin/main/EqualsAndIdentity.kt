@@ -1,5 +1,6 @@
 package main
 
+import DataMain
 import QuadrAngle
 
 fun main(){
@@ -9,4 +10,8 @@ fun main(){
     quadrAngle0 = quadrAngle2
     println(quadrAngle==quadrAngle2)
     println(quadrAngle0===quadrAngle2)
+
+    val dataMain1=DataMain(5)
+    val dataMain2=DataMain(5)
+    println(dataMain1==dataMain2)
 }

@@ -3,7 +3,7 @@ import inheritance.Shape
 fun main() {
     val triangle = Triangle(4, 5, 6)
     val quadrAngle = QuadrAngle(4, 5)
-    triangle.mutableProperty
+
     listOf<Figure>(triangle, quadrAngle).forEach {
         it.print()
     }
@@ -13,6 +13,9 @@ abstract class Figure(
     protected val height: Int,
     protected val width: Int
 ){
+    init {
+        println("default constructor was invoked")
+    }
     var mutableProperty:Int=0
         set(value) {field=value}
         get() {return field}
@@ -64,10 +67,13 @@ class Triangle(
 
 }
 
-//class Other:Shape{
+//class Other: Shape {
 //    override fun action() {
 //        TODO("Not yet implemented")
 //    }
 //
 //}
 
+data class DataMain(
+    val number:Int
+)

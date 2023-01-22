@@ -45,8 +45,8 @@ class Circle(val description:String):Shape(
 }
 fun typeChecker(value: Shape) {
     when (value) {
-        is Circle -> println("name")
-        is Square -> println("TOP")
+        is Circle -> println("Circle")
+        is Square -> println("Square")
     }
 }
 
