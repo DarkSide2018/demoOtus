@@ -74,6 +74,13 @@ class Triangle(
 //
 //}
 
-data class DataMain(
-    val number:Int
-)
+ data class DataMain(
+    val number:Int,
+    val triangle: Triangle
+){
+     init {
+         triangle.mutableProperty = number
+     }
+ }
+
+

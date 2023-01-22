@@ -8,6 +8,7 @@ class MutableUser(val map: MutableMap<String, Any?>) {
     var firstName: String by map
     var lastName: String by map
     var age: Int     by map
+    var fieldOne:Int = 0
 }
 val jackson = ObjectMapper()
     .registerKotlinModule()
