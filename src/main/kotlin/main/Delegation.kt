@@ -4,10 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 
 
-class MutableUser(val map: MutableMap<String, Any?>) {
-    var firstName: String by map
-    var lastName: String by map
-    var age: Int     by map
+class MutableUser(val map: Map<String, Any?>) {
+    val firstName: String by map
+    val lastName: String by map
+    val age: Int     by map
     var fieldOne:Int = 0
 }
 val jackson = ObjectMapper()
