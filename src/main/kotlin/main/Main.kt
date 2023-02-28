@@ -8,7 +8,17 @@ fun main() {
         it.print()
     }
 
+    val transPort = Transport(9,8)
+    // Деструктуризация
+    val (a,b) = transPort
+    println(a)
+    println(b)
 }
+
+data class Transport(
+    val length:Int,
+    val weight:Int
+)
 abstract class Figure(
     protected val height: Int,
     protected val width: Int
