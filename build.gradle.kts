@@ -12,6 +12,8 @@ repositories {
 }
 
 dependencies {
+    implementation("com.arcadedb:arcadedb-engine:23.2.1")
+    implementation("com.arcadedb:arcadedb-network:23.2.1")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.1")
     testImplementation(kotlin("test"))
 }
