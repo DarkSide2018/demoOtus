@@ -1,5 +1,3 @@
-import inheritance.Shape
-
 fun main() {
     val triangle = Triangle(4, 5, 6)
     val quadrAngle = QuadrAngle(4, 5)
