@@ -12,5 +12,5 @@ docker run -it --rm gremlin-console:3.6.2
 
 after that perfrom command in gremlin console
 
-:remote connect tinkerpop.server arcade-db-remote.yaml
+:remote connect tinkerpop.server arcade-db-remote.yaml session
 
