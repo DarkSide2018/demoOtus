@@ -9,7 +9,7 @@ docker container stop arcade-db
 
 
 echo "=========================="
-echo "remove old images"
+echo "remove old images arcade db"
 echo "----------------"
 
 docker container rm arcade-db
@@ -20,8 +20,10 @@ echo "----------------"
 
 
 docker run --name arcade-db \
-            --rm -p 2480:2480 -p 2424:2424 \
-           -e JAVA_OPTS="-Darcadedb.server.rootPassword=playwithdata -Darcadedb.server.defaultDatabases=Imported[root]{import:https://github.com/ArcadeData/arcadedb-datasets/raw/main/orientdb/OpenBeer.gz}"\
+            --rm -p 2480:2480 -p 2424:2424 -p 8182:8182 \
+           -e JAVA_OPTS="-Darcadedb.server.rootPassword=playwithdata \
+                          -Darcadedb.server.plugins=GremlinServer:com.arcadedb.server.gremlin.GremlinServerPlugin \
+                          -Darcadedb.server.defaultDatabases=Imported[root]{import:https://github.com/ArcadeData/arcadedb-datasets/raw/main/orientdb/OpenBeer.gz}"\
            -d arcadedata/arcadedb:latest
 
 

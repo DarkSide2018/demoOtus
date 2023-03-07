@@ -1,0 +1,10 @@
+FROM openjdk:8
+
+ARG tinkerpopVersion
+
+WORKDIR /opt
+RUN wget https://www.apache.org/dist/tinkerpop/$tinkerpopVersion/apache-tinkerpop-gremlin-console-$tinkerpopVersion-bin.zip
+RUN unzip ./apache-tinkerpop-gremlin-console-$tinkerpopVersion-bin.zip
+WORKDIR /opt/apache-tinkerpop-gremlin-console-$tinkerpopVersion
+COPY arcade-db-remote.yaml /opt/apache-tinkerpop-gremlin-console-$tinkerpopVersion
+ENTRYPOINT ["bin/gremlin.sh"]
