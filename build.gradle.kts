@@ -12,9 +12,17 @@ repositories {
 }
 
 dependencies {
-    implementation("com.arcadedb:arcadedb-engine:23.2.1")
-    implementation("com.arcadedb:arcadedb-network:23.2.1")
+    val arcadeDbVersion: String by project
+    val tinkerpopVersion: String by project
+    val testContainersVersion: String by project
+    implementation("com.arcadedb:arcadedb-engine:$arcadeDbVersion")
+    implementation("com.arcadedb:arcadedb-network:$arcadeDbVersion")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.1")
+    implementation("org.apache.tinkerpop:gremlin-driver:$tinkerpopVersion")
+    implementation("com.arcadedb:arcadedb-engine:$arcadeDbVersion")
+    implementation("com.arcadedb:arcadedb-network:$arcadeDbVersion")
+    implementation("com.arcadedb:arcadedb-gremlin:$arcadeDbVersion")
+    testImplementation("org.testcontainers:testcontainers:$testContainersVersion")
     testImplementation(kotlin("test"))
 }
 
