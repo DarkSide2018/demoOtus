@@ -1,10 +1,12 @@
 package dsl
 
 fun main() {
+
     val user = user {
         lastName = "Invanov"
         firstName = "Petr"
     }
+
     val user2 = user {
         firstName = "Vasya"
         lastName = "Sidorov"
