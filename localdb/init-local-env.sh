@@ -24,7 +24,7 @@ docker run --name arcade-db \
            -e JAVA_OPTS="-Darcadedb.server.rootPassword=playwithdata
                           -Darcadedb.server.plugins=GremlinServer:com.arcadedb.server.gremlin.GremlinServerPlugin
                           -Darcadedb.server.defaultDatabases=Imported[root]{import:https://github.com/ArcadeData/arcadedb-datasets/raw/main/orientdb/OpenBeer.gz}"\
-           -d arcadedata/arcadedb:22.8.1
+           -d arcadedata/arcadedb:22.2.1
 
 
 echo "=========================="

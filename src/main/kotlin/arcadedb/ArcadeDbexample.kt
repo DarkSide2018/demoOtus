@@ -4,7 +4,7 @@ import com.arcadedb.remote.RemoteDatabase
 
 
 fun main() {
-    val db = RemoteDatabase("localhost",2480,"test_arcade","root","playwithdata")
+    val db = RemoteDatabase("localhost",2480,"Imported","root","playwithdata")
     db.begin()
     val schema="""
             create vertex type Person if not exists;

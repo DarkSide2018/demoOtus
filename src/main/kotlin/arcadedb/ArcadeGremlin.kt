@@ -1,4 +1,0 @@
-package arcadedb
-
-class ArcadeGremlin {
-}
